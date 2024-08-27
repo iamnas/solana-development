@@ -1,0 +1,30 @@
+{
+  "name": "solana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "airdrop": "ts-node airdrop/index.ts",
+    "airdrop:test": "npm run build && node dist/airdrop/index.js",
+    "balance": "ts-node showBalance/index.ts",
+    "balance:test": "npm run build && node dist/showBalance/index.js",
+    "transfer-sol": "ts-node transfer-sol/index.ts",
+    "transfer-sol:test": "npm run build && node dist/transfer-sol/index.js",
+    "token": "ts-node token/index.ts",
+    "token:test": "npm run build && node dist/token/index.js",
+    "start-validator": "solana-test-validator --reset --quiet",
+    "airdrop-validator": "solana airdrop 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.3"
+  }
+}
